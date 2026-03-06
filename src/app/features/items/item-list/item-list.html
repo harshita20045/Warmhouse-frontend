@@ -1,0 +1,62 @@
+<div class="item-container">
+
+    <div class="page-header">
+        <h2>Item Management</h2>
+
+        <div class="header-actions">
+            <input
+                type="text"
+                class="search-box"
+                placeholder="Search items..."
+                [(ngModel)]="searchText">
+
+            <button class="btn-add">
+                + Add Item
+            </button>
+        </div>
+    </div>
+
+    <div class="table-card">
+
+        <table class="item-table">
+
+            <thead>
+                <tr>
+                    <th>Code</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Category</th>
+                    <th>Unit</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                <tr *ngFor="let item of items">
+
+                    <td class="item-code">{{ item.code }}</td>
+                    <td>{{ item.name }}</td>
+                    <td>{{ item.description }}</td>
+                    <td>{{ item.categoryName }}</td>
+                    <td>{{ item.unitName }}</td>
+
+                    <td>
+                        <span
+                        class="status"
+                        [ngClass]="item.isActive ? 'active' : 'inactive'">
+
+                        {{ item.isActive ? 'Active' : 'Inactive' }}
+
+                        </span>
+                    </td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>

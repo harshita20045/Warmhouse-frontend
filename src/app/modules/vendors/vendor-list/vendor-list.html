@@ -1,0 +1,66 @@
+<div class="vendor-container">
+
+    <div class="page-header">
+        <h2>Vendor Management</h2>
+
+        <div class="header-actions">
+            <input 
+                type="text" 
+                class="search-box"
+                placeholder="Search vendors..."
+                [(ngModel)]="searchText"
+            >
+
+            <button class="btn-add">
+                + Add Vendor
+            </button>
+        </div>
+    </div>
+
+
+    <div class="table-card">
+
+        <table class="vendor-table">
+
+            <thead>
+                <tr>
+                   
+                    <th>Code</th>
+                    <th>Contact Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                <tr *ngFor="let vendor of vendors">
+
+
+                    <td  class="vendor-name">{{ vendor.code }}</td>
+
+                    <td>{{ vendor.contactName }}</td>
+
+                    <td>{{ vendor.contactEmail }}</td>
+
+                    <td>{{ vendor.contactPhone }}</td>
+                    <td>
+                        <span 
+                        class="status"
+                        [ngClass]="vendor.IsActive ? 'active' : 'inactive'">
+
+                        {{ vendor.IsActive ? 'Active' : 'Inactive' }}
+
+                        </span>
+                    </td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>

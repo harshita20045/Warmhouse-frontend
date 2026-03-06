@@ -1,0 +1,57 @@
+    <div class="metrics-cards">
+      <div class="card">
+        <h3>Inventory Levels</h3>
+        <p class="count" data-target="1250">0</p>
+      </div>
+      <div class="card">
+        <h3>Pending Orders</h3>
+        <p class="count" data-target="84">0</p>
+      </div>
+      <div class="card">
+        <h3>Shipments in Transit</h3>
+        <p class="count" data-target="56">0</p>
+      </div>
+      <div class="card">
+        <h3>Low Stock Alerts</h3>
+        <p class="count" data-target="12">0</p>
+      </div>
+    </div>
+
+    <!-- Quick Actions -->
+    <div class="quick-actions">
+      <button onclick="alert('Purchase Order created!')">Create Purchase Order</button>
+      <button onclick="alert('Inventory added!')">Add Inventory</button>
+      <button onclick="alert('Report generated!')">Generate Report</button>
+    </div>
+
+    <!-- Charts -->
+    <div class="charts">
+      <div class="chart-container">
+        <canvas id="stockTrendChart"></canvas>
+      </div>
+      <div class="chart-container">
+        <canvas id="warehousePieChart"></canvas>
+      </div>
+    </div>
+
+    <!-- Recent Orders Table -->
+    <div class="table-container">
+      <h3>Recent Orders</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Order ID</th>
+            <th>Vendor</th>
+            <th>Status</th>
+            <th>Date</th>
+            <th>Quantity</th>
+          </tr>
+        </thead>
+        <tbody id="ordersTable">
+          <!-- Rows will be populated dynamically -->
+        </tbody>
+      </table>
+    </div>
+
+
+  

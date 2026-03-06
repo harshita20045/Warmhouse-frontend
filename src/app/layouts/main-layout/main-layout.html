@@ -1,0 +1,127 @@
+<!-- Header -->
+<header>
+  <div class="logo">Smart SCM</div>
+  <div class="header-icons">
+    <i class="fas fa-bell" id="notificationBell"></i>
+    <i class="fas fa-cog"></i>
+    <div class="profile-dropdown">
+      <i class="fas fa-user-circle" id="profileIcon"></i>
+      <div class="dropdown-menu" id="profileMenu">
+        <a href="#">Profile</a>
+        <a href="#">Settings</a>
+        <a href="#">Logout</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div style="display:flex; flex:1;">
+  <!-- Sidebar -->
+ <nav class="sidebar">
+  <a routerLink="/main/dashboard" routerLinkActive="active">
+    <i class="fas fa-tachometer-alt"></i> Dashboard
+  </a>
+    <a routerLink="/main/items" routerLinkActive="active">
+    <i class="fas fa-tachometer-alt"></i> Items
+  </a>
+
+  <a routerLink="/main/inventory" routerLinkActive="active">
+    <i class="fas fa-boxes"></i> Inventory
+  </a>
+
+  <a routerLink="/main/vendors" routerLinkActive="active">
+    <i class="fas fa-truck"></i> Vendors
+  </a>
+
+  <a routerLink="/orders" routerLinkActive="active">
+    <i class="fas fa-shopping-cart"></i> Orders
+  </a>
+
+  <a routerLink="/analytics" routerLinkActive="active">
+    <i class="fas fa-chart-line"></i> Analytics
+  </a>
+
+  <a routerLink="/reports" routerLinkActive="active">
+    <i class="fas fa-file-alt"></i> Reports
+  </a>
+</nav>
+
+  <!-- Main Dashboard -->
+  <main>
+  
+    <router-outlet></router-outlet>
+  </main>
+</div>
+
+<!-- Scripts -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+  // Animate metrics counters
+  const counters = document.querySelectorAll('.count');
+  counters.forEach(counter => {
+    const updateCount = () => {
+      const target = +counter.getAttribute('data-target');
+      const current = +counter.innerText;
+      const increment = target / 100;
+      if(current < target) {
+        counter.innerText = Math.ceil(current + increment);
+        setTimeout(updateCount, 20);
+      } else {
+        counter.innerText = target;
+      }
+    };
+    updateCount();
+  });
+
+  // Sample order data
+  const orders = [
+    { id: 'ORD-101', vendor: 'Vendor A', status: 'Pending', date: '05-Mar-2026', qty: 150 },
+    { id: 'ORD-102', vendor: 'Vendor B', status: 'Shipped', date: '04-Mar-2026', qty: 200 },
+    { id: 'ORD-103', vendor: 'Vendor C', status: 'Delivered', date: '03-Mar-2026', qty: 120 },
+    { id: 'ORD-104', vendor: 'Vendor D', status: 'Pending', date: '02-Mar-2026', qty: 90 },
+  ];
+
+  const tableBody = document.getElementById('ordersTable');
+  orders.forEach(order => {
+    const row = document.createElement('tr');
+    row.innerHTML = `<td>${order.id}</td><td>${order.vendor}</td><td>${order.status}</td><td>${order.date}</td><td>${order.qty}</td>`;
+    tableBody.appendChild(row);
+  });
+
+  // Profile dropdown
+  const profileIcon = document.getElementById('profileIcon');
+  const profileMenu = document.getElementById('profileMenu');
+  profileIcon.addEventListener('click', () => {
+    profileMenu.classList.toggle('show');
+  });
+
+  // Charts
+  const stockTrendChart = new Chart(document.getElementById('stockTrendChart'), {
+    type: 'line',
+    data: {
+      labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May'],
+      datasets: [{
+        label: 'Stock Trend',
+        data: [1200, 1300, 1250, 1400, 1350],
+        borderColor: '#4e73df',
+        backgroundColor: 'rgba(78,115,223,0.1)',
+        fill: true,
+        tension: 0.3
+      }]
+    },
+    options: { responsive: true }
+  });
+
+  const warehousePieChart = new Chart(document.getElementById('warehousePieChart'), {
+    type: 'pie',
+    data: {
+      labels: ['Occupied', 'Available'],
+      datasets: [{
+        data: [70, 30],
+        backgroundColor: ['#1cc88a', '#36b9cc']
+      }]
+    },
+    options: { responsive: true }
+  });
+</script> -->
+
