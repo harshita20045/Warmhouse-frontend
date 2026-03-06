@@ -41,7 +41,7 @@ export const routes: Routes = [
   { path: 'items', loadChildren: () => import('./features/items/items-module').then(m => m.ItemsModule) },
   // other routes
 
-
+{ path: 'categories', loadChildren: () => import('./features/categories/categories-module').then(m => m.CategoriesModule) }
 
     ]
   }

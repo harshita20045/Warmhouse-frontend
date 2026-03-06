@@ -17,38 +17,41 @@
 
 <div style="display:flex; flex:1;">
   <!-- Sidebar -->
- <nav class="sidebar">
-  <a routerLink="/main/dashboard" routerLinkActive="active">
-    <i class="fas fa-tachometer-alt"></i> Dashboard
-  </a>
+  <nav class="sidebar">
+    <a routerLink="/main/dashboard" routerLinkActive="active">
+      <i class="fas fa-tachometer-alt"></i> Dashboard
+    </a>
     <a routerLink="/main/items" routerLinkActive="active">
-    <i class="fas fa-tachometer-alt"></i> Items
-  </a>
+      <i class="fas fa-tachometer-alt"></i> Items
+    </a>
+    <a routerLink="/main/categories" routerLinkActive="active">
+      <i class="fas fa-tags"></i> Categories
+    </a>
 
-  <a routerLink="/main/inventory" routerLinkActive="active">
-    <i class="fas fa-boxes"></i> Inventory
-  </a>
+    <a routerLink="/main/inventory" routerLinkActive="active">
+      <i class="fas fa-boxes"></i> Inventory
+    </a>
 
-  <a routerLink="/main/vendors" routerLinkActive="active">
-    <i class="fas fa-truck"></i> Vendors
-  </a>
+    <a routerLink="/main/vendors" routerLinkActive="active">
+      <i class="fas fa-truck"></i> Vendors
+    </a>
 
-  <a routerLink="/orders" routerLinkActive="active">
-    <i class="fas fa-shopping-cart"></i> Orders
-  </a>
+    <a routerLink="/orders" routerLinkActive="active">
+      <i class="fas fa-shopping-cart"></i> Orders
+    </a>
 
-  <a routerLink="/analytics" routerLinkActive="active">
-    <i class="fas fa-chart-line"></i> Analytics
-  </a>
+    <a routerLink="/analytics" routerLinkActive="active">
+      <i class="fas fa-chart-line"></i> Analytics
+    </a>
 
-  <a routerLink="/reports" routerLinkActive="active">
-    <i class="fas fa-file-alt"></i> Reports
-  </a>
-</nav>
+    <a routerLink="/reports" routerLinkActive="active">
+      <i class="fas fa-file-alt"></i> Reports
+    </a>
+  </nav>
 
   <!-- Main Dashboard -->
   <main>
-  
+
     <router-outlet></router-outlet>
   </main>
 </div>
@@ -124,4 +127,3 @@
     options: { responsive: true }
   });
 </script> -->
-

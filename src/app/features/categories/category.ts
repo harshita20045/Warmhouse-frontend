@@ -1,3 +1,4 @@
+
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
@@ -5,14 +6,16 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class ItemService {
+export class CategoryService {
 
-  private apiUrl = 'https://localhost:7068/api/items';
+  private apiUrl = 'https://localhost:7068/api/Categories';
 
   constructor(private http: HttpClient) {}
 
-  getItems(): Observable<any[]> {
+  getCategories(): Observable<any[]> {
+
     return this.http.get<any[]>(this.apiUrl);
+    
   }
 
 }

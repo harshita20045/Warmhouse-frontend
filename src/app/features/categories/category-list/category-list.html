@@ -1,0 +1,60 @@
+<div class="item-container">
+
+    <div class="page-header">
+        <h2>Category Management</h2>
+
+        <div class="header-actions">
+            <input
+                type="text"
+                class="search-box"
+                placeholder="Search categories..."
+                [(ngModel)]="searchText">
+
+            <button class="btn-add">
+                + Add Category
+            </button>
+        </div>
+    </div>
+
+    <div class="table-card">
+
+        <table class="item-table">
+
+            <thead>
+                <tr>
+                  
+                    <th>Name</th>
+                    <th>Description</th>
+            
+                    <th>Status</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                <tr *ngFor="let category of categories">
+
+                 
+                    <td>{{ category.name }}</td>
+                    <td>{{ category.description }}</td>
+                 
+
+                    <td>
+                        <span
+                        class="status"
+                        [ngClass]="category.isActive ? 'active' : 'inactive'">
+
+                        {{ category.isActive ? 'Active' : 'Inactive' }}
+
+                        </span>
+                    </td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
