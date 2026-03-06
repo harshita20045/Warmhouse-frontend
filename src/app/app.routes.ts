@@ -38,10 +38,10 @@ export const routes: Routes = [
           import('./modules/vendors/vendors-module').then(m => m.VendorsModule)
       },
 
-  { path: 'items', loadChildren: () => import('./features/items/items-module').then(m => m.ItemsModule) },
-  // other routes
+      { path: 'items', loadChildren: () => import('./features/items/items-module').then(m => m.ItemsModule) },
 
-{ path: 'categories', loadChildren: () => import('./features/categories/categories-module').then(m => m.CategoriesModule) }
+      { path: 'categories', loadChildren: () => import('./features/categories/categories-module').then(m => m.CategoriesModule) },
+      { path: 'warehouses', loadChildren: () => import('./features/warehouses/warehouses-module').then(m => m.WarehousesModule) }
 
     ]
   }

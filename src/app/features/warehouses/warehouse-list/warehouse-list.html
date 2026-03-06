@@ -1,0 +1,51 @@
+<div class="item-container">
+
+    <div class="page-header">
+        <h2>Warehouse Management</h2>
+
+        <div class="header-actions">
+            <input
+                type="text"
+                class="search-box"
+                placeholder="Search Warehouses..."
+                [(ngModel)]="searchText">
+
+            <button class="btn-add">
+                + Add Warehouse
+            </button>
+        </div>
+    </div>
+
+    <div class="table-card">
+
+        <table class="item-table">
+
+            <thead>
+                <tr>
+                    <th>Code</th>
+                    <th>Name</th>
+                    <th>Location</th>
+
+                </tr>
+            </thead>
+
+            <tbody>
+
+                <tr *ngFor="let warehouse of warehouses">
+
+                    <td class="item-code">{{ warehouse.code }}</td>
+                    <td>{{ warehouse.name }}</td>
+                    <td>{{ warehouse.location }}</td>
+                    
+
+                   
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>

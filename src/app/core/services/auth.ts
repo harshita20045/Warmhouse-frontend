@@ -13,11 +13,11 @@ export class Auth {
   constructor(private http: HttpClient, private router: Router) {}
 
   login(username: string, password: string) {
-    return this.http.post<{ token: string }>(`${environment.apiUrl}/Auth/login`, { username, password })
+    return this.http.post<{ accessToken: string }>(`${environment.apiUrl}/Auth/login`, { username, password })
       .pipe(
         tap(res => {
-          this.token.set(res.token);
-          localStorage.setItem('token', res.token);
+          this.token.set(res.accessToken);
+          localStorage.setItem('token', res.accessToken);
         })
       );
   }
